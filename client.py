@@ -4,6 +4,9 @@ import threading
 HOST = '127.0.0.1'
 PORT = 8000
 
+# Get username when starting
+username = input("Enter your username: ")
+
 def receive_message():
     while True:
         try:
@@ -26,12 +29,18 @@ def send_message():
             client_socket.close()
             print("Disconnected from the server.")
             break
-        client_socket.send(message.encode('utf-8'))
+        # Send message with username
+        formatted_message = f"{username}: {message}"
+        client_socket.send(formatted_message.encode('utf-8'))
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
     client_socket.connect((HOST, PORT))
     print(f"Connected to the server at HOST:{HOST} PORT: {PORT}")
+    
+    # Send username to server when first connecting
+    client_socket.send(f"USERNAME:{username}".encode('utf-8'))
+    
 except:
     print("Unable to connect to the server.")
     exit()
