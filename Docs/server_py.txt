@@ -1,0 +1,52 @@
+Server.py
+    1. Initial Setup:
+        a. Creates a TCP/IP socket.
+        b. Binds to localhost.
+        c. Start listening for connections.
+    2. Log Managemet:
+    3. Broadcast:
+        a. Parses the message using parse_message from protocol.py.
+        b. Log the messages using log_message from protocol.py.
+        c. Ensures that the message is sent to all clients except the sender.
+        d. Handles exceptions and errors.
+    4. Remove Client:
+        a. Remove client from the clients dictionary.
+        b. Log the client leaving the chat.
+        c. Close the client socket.
+        d. Broadcast the client leaving the chat.
+    5. Handle Client:
+        a. Accepts a new client connection.
+        b. Log the connection status.
+        c. Wait for HELLO message.
+        d. Parse the message.
+        e. Check if the message is a HELLO message.
+        f. Handshake with the client and server.
+        g. Accept Username.
+        h. Acknowledge the HELLO message.
+        i. Normal chat messages.
+        j. Handle exceptions and errors.
+    6. Accept Clients:
+        a. Accepts new client connections.
+        b. Log each client connection.
+        c. Start a new thread to handle the client.
+        d. Handle exceptions and errors.
+    7. Main Loop:
+        a. Continuously accept new clients.
+        b. Handle exceptions and errors.
+
+Functions used:
+    socket: Creating a TCP(For ordered reliability) socket.
+    message = socket.recv(1024); the 1024 is the buffer size to which is the maximum amount of data to receive at once.
+    1024 is the perfect size for messages and is efficient for chatting.
+    threading: Handling multiple clients in separate threads.
+    protocol: Parsing and logging messages.
+    logging: File and console logging.
+    os: Creating logs directory if it doesn't exist.
+
+Flow of the Server:
+    a. Start the server.
+    b. Wait for clients to connect.
+    c. Handle each client connection in a separate thread.
+    d. Broadcast messages to all connected clients.
+    e. Remove clients when they leave the chat.
+    f. Log all actions and errors.

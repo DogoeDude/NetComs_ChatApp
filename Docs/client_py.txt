@@ -1,0 +1,63 @@
+Client.py
+    1. Start the client by defining the host and port, as well as the username.
+    2. Main Function:
+        a. receive_message():
+            - Receive messages from the server.
+            - Parse the message.
+            - Print the message.
+        b. send_message():
+            - Send messages to the server.
+            - Parse the message.
+            - Send the message.
+        c. connect_to_server():
+            - Connect to the server.
+            - Send the HELLO message.
+            - Wait for the HELLO_ACK message.
+            - Send the USERNAME message.
+            - Wait for the USERNAME_ACK message.
+            - Send the PASSWORD message.
+            - Wait for the PASSWORD_ACK message.
+            How the connect_to_server() function works:
+                - Send the HELLO message.
+                - Wait for the HELLO_ACK message.
+                - Send the USERNAME message.
+                - Wait for the USERNAME_ACK message.
+                - Send the PASSWORD message.
+                - Wait for the PASSWORD_ACK message.
+                - Send the JOIN message.
+                - Wait for the JOIN_ACK message.
+    3. Connection flow:
+        a. Create a socket connection to the server.
+            -client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        b. Connect to the server and perform the handshake.
+        c. Send the JOIN message.
+            -join_message = create_message(MessageType.JOIN, username, "joined the chat") 
+            -client_socket.send(join_message)
+        d. Start 2 threads:
+            receive_thread = threading.Thread(target=receive_message)
+            receive_thread.start()
+            send_thread = threading.Thread(target=send_message)
+            send_thread.start()
+Key Features:
+    A. Threading: Uses 2 threads to handle sending and receiving messages simultaneously.
+        -The client maintains 2 simultaneous operations through threading:
+            One thread listens for incoming messages from the server.
+            The other thread sends messages to the server.
+    B. Error Handling: Handles errors by logging them and exiting the program.
+    C. Protocol: Uses a custom protocol to send and receive messages.
+    D. Clean Disconnect: Handles disconnections gracefully by "/exit".
+
+Libraries used:
+    - socket: For creating a socket connection to the server and also provides TCP/IP opperations.
+    - threading: For creating 2 threads to handle sending and receiving messages simultaneously.
+        Threading is used to handle multiple operations simultaneously, allowing the client to send and receive messages without interrupting the main thread.
+
+Flow of the Client:
+    a. Start the client.
+    b. Connect to the server.
+    c. Perform the handshake.
+    d. Send the JOIN message.
+    e. Start 2 threads:
+        -One thread listens for incoming messages from the server.
+        -The other thread sends messages to the server.
+

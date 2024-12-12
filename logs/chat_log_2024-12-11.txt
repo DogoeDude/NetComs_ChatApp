@@ -1,0 +1,69 @@
+[15:56:41] System: Ashley joined the chat
+[15:56:43] Ashley: Hello
+[15:56:54] System: Reggie joined the chat
+[15:56:56] Reggie: Hi
+[15:57:47] Ashley: My name is Ashley
+[15:57:54] Reggie: Nice to meet you then!
+[16:01:25] System: Ashley joined the chat
+[16:01:31] System: Reggie joined the chat
+[16:01:35] Reggie: Hello, this is a test!
+[16:01:45] Ashley: Hi!, this is a test!
+[16:04:18] Reggie: quit
+[16:04:20] Reggie: /quit
+[16:04:40] Reggie: leave
+[16:04:54] System: Reggie left the chat
+[16:10:54] System: Reggie joined the chat
+[16:12:04] System: Reggie joined the chat
+[16:12:29] Reggie: hello?
+[16:13:17] System: Ashley joined the chat
+[16:13:21] Ashley: Umm hello
+[16:14:01] Ashley: 
+[16:14:24] Ashley: HELLO_ACK
+[18:58:37] System: James joined the chat
+[18:59:10] System: Ashley joined the chat
+[18:59:13] System: Reggie joined the chat
+[18:59:56] Reggie: Hello This is a test 6:59
+[19:00:02] James: My name is James
+[19:00:05] Ashley: I like niggers
+[22:27:16] System: James left the chat
+[22:27:16] System: Ashley left the chat
+[22:27:17] System: Reggie left the chat
+[22:45:10] System: Reggie joined the chat
+[22:45:13] Reggie: hello?
+[22:45:22] System: Ashley joined the chat
+[22:45:24] Ashley: hello
+[22:46:20] Reggie: left the chat
+[22:46:20] System: Reggie left the chat
+[22:46:21] Ashley: left the chat
+[22:46:21] System: Ashley left the chat
+[22:46:57] System: Reggie joined the chat
+[22:46:59] Reggie: hello
+[22:47:07] System: Ashley joined the chat
+[22:47:09] Ashley: HELLO
+[22:47:33] System: Reggie left the chat
+[22:47:33] System: Ashley left the chat
+[22:47:51] System: Reggie joined the chat
+[22:47:54] Reggie: hello
+[22:47:56] Reggie: /quit
+[22:48:00] Reggie: /leave
+[22:48:36] System: Reggie left the chat
+[22:49:19] System: reggie joined the chat
+[22:49:24] reggie: Reggie
+[22:50:15] reggie: left the chat
+[22:50:15] System: reggie left the chat
+[22:50:34] System: reggie joined the chat
+[22:50:37] reggie: hello
+[22:50:53] reggie: left the chat
+[22:50:53] System: reggie left the chat
+[22:51:32] System: Reggie joined the chat
+[22:51:33] Reggie: Hi
+[22:51:38] System: Ashley joined the chat
+[22:51:39] Ashley: Hi
+[22:54:48] Ashley: hemlooo
+[22:54:56] System: Ashley left the chat
+[22:55:34] System: Reggie left the chat
+[22:55:41] System: Reggie joined the chat
+[22:55:43] System: Reggie left the chat
+[22:56:10] System: Reggie joined the chat
+[22:56:12] Reggie: hi
+[22:56:27] System: Reggie left the chat

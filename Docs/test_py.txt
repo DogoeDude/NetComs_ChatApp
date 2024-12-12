@@ -1,0 +1,38 @@
+Tests.py
+    a. Test the protocol functions.
+    b. Test the server functions.
+    c. Test the client functions.
+
+    1. Test setup:
+        a. Import necessary modules.
+        b. Define test cases.
+        
+    2. Testing Message Creation:
+        a. Verify correct message format / JSON format.
+        b. Checks all the fields are present and correct.
+
+    3. Testing Message Parsing:
+        a. Verify correct data types.
+        b. Checks all the fields are present and correct.
+
+    4. Testing Message Display:
+        a. Verifies the correct string format.
+        b. Tests different message types.
+
+    5. Testing Handshake Protocols:
+        a. Tests handshake protocols for connection establishment.
+        b. Tests both the HELLO and HELLO_ACK messages.
+
+    6. Testing Time Stamps:
+        a. Verify timestamp format.
+        b. Checks the timestamp validity.
+
+    7. Testing Invalid Messages:
+        a. Verifies the correct error message.
+        b. Checks the error handling.
+
+Flow of the Tests:
+    a. Setup the test environment.
+    b. Run the tests.
+    c. Verify the results.
+    d. Clean up the test environment.

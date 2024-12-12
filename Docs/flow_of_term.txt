@@ -1,0 +1,29 @@
+Flow of the Local Chat:
+
+    Protocol:
+        a. First is the server revolves around the protocol.py file.
+        b. The protocol.py file contains the functions for creating, parsing, and displaying messages.
+        c. The protocol.py file also contains the functions for the handshake protocols.
+        d. The protocol.py file also contains the functions for the log management.
+
+    Server:
+        a. The server.py file contains the main loop for the server.
+        b. The server.py file contains the functions for accepting clients, handling clients, and broadcasting messages.
+        c. The server.py file also contains the functions for the log management.
+
+    Client:
+        a. The client.py file contains the main loop for the client.
+        b. The client.py file contains the functions for connecting to the server, performing the handshake, and sending messages.
+        c. The client.py file also contains the functions for the log management.
+
+    Flow of the Local Chat:
+        a. To start the server, run the command "python server.py" in the terminal.
+        b. When the server is running, it will listen for connections and proceed with the handshake protocols.
+        c. The server will then wait for the a to connect.
+        d. Connect to the server by running the command "python client.py" in the terminal.
+        e. When the client connects, the server will acknowledge the connection and proceed with the handshake protocols and also log the connection.
+        f. The server will then wait for the client to send a message and each message will be logged and broadcasted to all connected clients.
+        g. When the client sends a message, the server will parse the message and display it.
+        h. The server will then broadcast the message to all connected clients.
+        i. The server will then wait for the client to send a message again.
+        j. This cycle will repeat until the client or server decides to leave the chat.

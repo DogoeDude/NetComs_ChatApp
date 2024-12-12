@@ -1,0 +1,50 @@
+Protocol.py
+    What is a protocol?
+        A protocol is a set of rules and conventions that define how data is exchanged between two or more entities.
+    1. Logging Setup:
+        -Create a logs directory if it doesn't exist.
+        -Set up logging configuration.
+        -Logs go both file and console.
+
+    2. Connection States(Enums for Type Safety):
+        -Tracks the different States of the connection.
+        -Provide human readable status messages.
+
+    3. Message Types(Enums for Type Safety):
+        -Tracks the different types of messages.
+        -Provide human readable message types.
+
+    4. Message Creation:
+        a. Create_message(msg_type, username, content, timestamp)
+        b. parse_message(message)
+            -JSON standard message formats.
+            -Handles encoding and decoding of messages.
+
+    5. Display formatting:
+        -Format the message for display in the terminal/GUI.
+        -Special handling for system messages.
+
+    6. Handshake Protocols:
+        -Create special messages for connection establishment.
+        -Simpler format than regular chat messages.
+    
+    7. Error Handling:
+        -Log errors with detailed information.
+        -Provide user friendly error messages.
+
+Functions used:
+    JSON:  Convert Python objects to JSON strings and vice versa.
+        -Ensures consistent data format.
+        -Easy to parse and manipulate.
+        -Could support future features like encryption.
+    enums: Provides type safety for message types and connection states.
+    datetime: Getting current time for timestamps.
+    logging: File and console logging.
+    os: Creating logs directory if it doesn't exist.
+
+Flow of the Protocol:
+    a. Create a message.
+    b. Parse the message.
+    c. Display the message.
+    d. Handle errors and exceptions.
+
