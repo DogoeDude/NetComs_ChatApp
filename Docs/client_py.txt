@@ -15,8 +15,6 @@ Client.py
             - Wait for the HELLO_ACK message.
             - Send the USERNAME message.
             - Wait for the USERNAME_ACK message.
-            - Send the PASSWORD message.
-            - Wait for the PASSWORD_ACK message.
             How the connect_to_server() function works:
                 - Send the HELLO message.
                 - Wait for the HELLO_ACK message.

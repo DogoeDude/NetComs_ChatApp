@@ -1,0 +1,4 @@
+{
+    "reportMissingImports": false,
+    "pythonPath": "path/to/your/python"
+} 

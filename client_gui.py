@@ -3,12 +3,12 @@ from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                             QHBoxLayout, QTextEdit, QLineEdit, QPushButton, 
                             QLabel, QInputDialog, QMessageBox)
 from PyQt6.QtCore import Qt, QThread, pyqtSignal
+from PyQt6.QtGui import QFont, QColor
 import socket
-import json
+from datetime import datetime
 from protocol import (
     MessageType, create_message, parse_message, format_message_for_display,
-    create_handshake_message, setup_logging, ConnectionStatus, log_connection_status,
-    log_error
+    create_handshake_message, setup_logging
 )
 
 class ChatThread(QThread):
@@ -23,25 +23,16 @@ class ChatThread(QThread):
     def run(self):
         while self.running:
             try:
-                # Set a timeout so we can check running state regularly
-                self.client_socket.settimeout(0.1)  # 100ms timeout
                 message = self.client_socket.recv(1024)
-                
-                if not self.running:
-                    break
-                    
-                if message:
+                if message and self.running:
                     msg_data = parse_message(message)
                     formatted_message = format_message_for_display(msg_data)
+                    print(f"Received: {formatted_message}")  # Debug print
                     self.message_received.emit(formatted_message)
-                else:
-                    break
-                    
-            except socket.timeout:
-                continue  # Just check running state again
             except Exception as e:
-                if self.running:  # Only emit error if not shutting down
-                    self.connection_error.emit(f"Error occurred: {e}")
+                if self.running:
+                    print(f"Thread error: {e}")
+                    self.connection_error.emit(str(e))
                 break
 
     def stop(self):
@@ -57,121 +48,141 @@ class ChatWindow(QMainWindow):
         self.connectToServer()
 
     def initUI(self):
-        self.setWindowTitle('Local Chat')
-        self.setMinimumSize(800, 600)
-
-        # Add menu bar
-        menubar = self.menuBar()
-        fileMenu = menubar.addMenu('File')
-        
-        # Add quit action
-        quitAction = fileMenu.addAction('Quit')
-        quitAction.setShortcut('Ctrl+Q')
-        quitAction.triggered.connect(self.close)
-
-        # Main widget and layout
-        main_widget = QWidget()
-        self.setCentralWidget(main_widget)
-        layout = QVBoxLayout(main_widget)
-
-        # Chat display
-        self.chat_display = QTextEdit()
-        self.chat_display.setReadOnly(True)
-        self.chat_display.setStyleSheet("""
+        self.setWindowTitle('Local Chat: CS3A')
+        self.setMinimumSize(500, 600)
+        self.setStyleSheet("""
+            QMainWindow {
+                background-color: #1e1e1e;
+            }
+            QWidget {
+                background-color: #1e1e1e;
+                color: #ffffff;
+            }
             QTextEdit {
-                background-color: #ffffff;
-                border: 1px solid #cccccc;
-                border-radius: 5px;
+                background-color: #2d2d2d;
+                border: 1px solid #3d3d3d;
+                border-radius: 8px;
                 padding: 10px;
-                font-family: Arial;
                 font-size: 14px;
+                color: #ffffff;
+            }
+            QLineEdit {
+                background-color: #2d2d2d;
+                border: 1px solid #3d3d3d;
+                border-radius: 20px;
+                padding: 10px;
+                font-size: 14px;
+                color: #ffffff;
+            }
+            QLineEdit:focus {
+                border: 1px solid #0084ff;
+            }
+            QPushButton {
+                background-color: #0084ff;
+                color: white;
+                border: none;
+                border-radius: 20px;
+                padding: 10px 20px;
+                font-weight: bold;
+                min-width: 80px;
+            }
+            QPushButton:hover {
+                background-color: #0073e6;
+            }
+            QLabel {
+                color: #0084ff;
+            }
+            QStatusBar {
+                background-color: #1e1e1e;
+                color: #888888;
+            }
+            QMessageBox {
+                background-color: #2d2d2d;
+                color: #ffffff;
             }
         """)
-        # Ensure word wrap is enabled
-        self.chat_display.setLineWrapMode(QTextEdit.LineWrapMode.WidgetWidth)
-        # Set a minimum height
-        self.chat_display.setMinimumHeight(300)
+
+        # Main widget and layout
+        central_widget = QWidget()
+        self.setCentralWidget(central_widget)
+        layout = QVBoxLayout(central_widget)
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(10)
+
+        # Title
+        title = QLabel("Local Chat: CS3A")
+        title.setStyleSheet("""
+            QLabel {
+                color: #0084ff;
+                font-size: 24px;
+                font-weight: bold;
+                padding: 10px;
+            }
+        """)
+        layout.addWidget(title)
+
+        # Chat display with rich text support
+        self.chat_display = QTextEdit()
+        self.chat_display.setReadOnly(True)
+        self.chat_display.setAcceptRichText(True)  # Enable rich text
         layout.addWidget(self.chat_display)
-
-        # Display welcome message and commands
-        welcome_message = """
-Welcome to NetComs Chat!
-
-Available Commands:
-/help    - Display this help message
-/exit    - Exit the chat
-/clear   - Clear the chat window
-/users   - Show online users (if supported)
-
-Press Enter or click Send to send a message.
-------------------------------------------
-"""
-        self.chat_display.append(welcome_message)
 
         # Input area
         input_layout = QHBoxLayout()
-        
         self.message_input = QLineEdit()
         self.message_input.setPlaceholderText("Type your message...")
-        self.message_input.setStyleSheet("""
-            QLineEdit {
-                border: 1px solid #cccccc;
-                border-radius: 5px;
-                padding: 8px;
-                font-family: Arial;
-                font-size: 14px;
-            }
-        """)
         self.message_input.returnPressed.connect(self.send_message)
         
-        self.send_button = QPushButton("Send")
-        self.send_button.setStyleSheet("""
-            QPushButton {
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                padding: 8px 20px;
-                font-weight: bold;
-            }
-            QPushButton:hover {
-                background-color: #45a049;
-            }
-        """)
-        self.send_button.clicked.connect(self.send_message)
-
+        send_button = QPushButton("Send")
+        send_button.clicked.connect(self.send_message)
+        
         input_layout.addWidget(self.message_input)
-        input_layout.addWidget(self.send_button)
+        input_layout.addWidget(send_button)
         layout.addLayout(input_layout)
 
         # Status bar
-        self.statusBar().showMessage('Connecting...')
+        self.statusBar().showMessage('Not Connected')
+        
+        # Welcome message
+        welcome_text = """
+<span style="color: #0084ff;">Welcome to NetComs Chat!</span>
+
+<span style="color: #888888;">Available Commands:
+/help    - Display this help message
+/exit    - Exit the chat
+/clear   - Clear the chat window
+
+Press Enter or click Send to send a message.</span>
+------------------------------------------
+"""
+        self.chat_display.append(welcome_text)
 
     def connectToServer(self):
         HOST = '127.0.0.1'
         PORT = 8000
 
         # Get username
-        username, ok = QInputDialog.getText(self, 'Username', 'Enter your username:')
+        username, ok = QInputDialog.getText(
+            self, 'Login', 'Enter your username:',
+            QLineEdit.EchoMode.Normal, ''
+        )
         if not ok or not username:
             self.close()
             return
         self.username = username
 
-        # Connect to server
         try:
             self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.client_socket.connect((HOST, PORT))
             
             # Handshake process
-            log_connection_status(ConnectionStatus.HANDSHAKE_STARTED)
             hello_msg = create_handshake_message(MessageType.HELLO)
             self.client_socket.send(hello_msg)
             
             response = parse_message(self.client_socket.recv(1024))
             if response["type"] != MessageType.HELLO_ACK.value:
                 raise Exception("Handshake failed")
-                
+            
             username_msg = create_message(MessageType.USERNAME, self.username, self.username)
             self.client_socket.send(username_msg)
             
@@ -190,6 +201,7 @@ Press Enter or click Send to send a message.
             self.chat_thread.start()
 
             self.statusBar().showMessage('Connected')
+            self.chat_display.append("Connected to server!")
 
         except Exception as e:
             QMessageBox.critical(self, 'Connection Error', f'Could not connect to server: {str(e)}')
@@ -198,106 +210,91 @@ Press Enter or click Send to send a message.
     def send_message(self):
         message = self.message_input.text().strip()
         if message:
-            # Command handling
             if message.startswith('/'):
-                self.handle_command(message.lower())
-                self.message_input.clear()
-                return
-                
-            try:
-                chat_message = create_message(MessageType.CHAT, self.username, message)
-                self.client_socket.send(chat_message)
-                
-                # Display our own message locally
-                msg_data = parse_message(chat_message)
-                formatted_message = format_message_for_display(msg_data)
-                
-                # Force GUI update
-                QApplication.processEvents()
-                self.display_message(formatted_message)
-                self.message_input.clear()
-                
-            except Exception as e:
-                print(f"Error in send_message: {e}")
-                self.statusBar().showMessage(f'Error sending message: {str(e)}')
+                self.handle_command(message)
+            else:
+                try:
+                    chat_message = create_message(MessageType.CHAT, self.username, message)
+                    self.client_socket.send(chat_message)
+                    
+                    # Display our own message immediately with highlighting
+                    timestamp = datetime.now().strftime('%H:%M:%S')
+                    self.chat_display.append(
+                        f'<div style="color: #00ff00;">'  # Bright green for own messages
+                        f'[{timestamp}] {self.username}: {message}'
+                        f'</div>'
+                    )
+                    
+                    self.message_input.clear()
+                except Exception as e:
+                    print(f"Error sending message: {e}")
+                    self.statusBar().showMessage(f'Error sending message: {str(e)}')
+
+    def display_message(self, message):
+        # Check if message contains our username and highlight it if not our message
+        if self.username in message and "[System]" not in message:
+            if f"{self.username}:" not in message:  # Not our message
+                highlighted_message = message.replace(
+                    self.username,
+                    f'<span style="color: #00ff00;">{self.username}</span>'  # Highlight mentions
+                )
+                self.chat_display.append(highlighted_message)
+            else:
+                self.chat_display.append(message)
+        else:
+            self.chat_display.append(message)
 
     def handle_command(self, command):
-        if command == '/help':
-            help_message = """
+        if command == '/exit':
+            self.close()
+        elif command == '/clear':
+            self.chat_display.clear()
+            self.chat_display.append("Chat cleared. Type /help for available commands.")
+        elif command == '/help':
+            help_text = """
 Available Commands:
 /help    - Display this help message
 /exit    - Exit the chat
 /clear   - Clear the chat window
-/users   - Show online users (if supported)
 """
-            self.chat_display.append(help_message)
-        
-        elif command == '/exit':
-            self.close()
-        
-        elif command == '/clear':
-            self.chat_display.clear()
-            self.chat_display.append("Chat cleared. Type /help for available commands.")
-        
-        elif command == '/users':
-            # This would need server support to implement
-            self.chat_display.append("Server does not support user listing yet.")
-        
-        else:
-            self.chat_display.append(f"Unknown command: {command}")
-
-    def display_message(self, message):
-        """Update the chat display with new messages"""
-        if not message:
-            return
-            
-        try:
-            self.chat_display.append(message)
-            # Force update
-            self.chat_display.repaint()
-            # Scroll to bottom
-            scrollbar = self.chat_display.verticalScrollBar()
-            scrollbar.setValue(scrollbar.maximum())
-        except Exception as e:
-            print(f"Error displaying message: {e}")
+            self.chat_display.append(help_text)
 
     def handle_connection_error(self, error_message):
         self.statusBar().showMessage(error_message)
         QMessageBox.warning(self, 'Connection Error', error_message)
 
     def closeEvent(self, event):
-        if self.client_socket and self.chat_thread:
-            try:
-                # 1. Set running to False to stop the thread gracefully
-                self.chat_thread.running = False
-                
-                # 2. Send leave message before closing anything
-                leave_message = create_message(MessageType.LEAVE, self.username, "left the chat")
-                self.client_socket.send(leave_message)
-                
-                # 3. Small delay to allow message to be sent
-                self.chat_thread.wait(100)  # Wait 100ms
-                
-                # 4. Close socket
+        try:
+            if self.client_socket:
+                # First stop the thread
+                if self.chat_thread and self.chat_thread.isRunning():
+                    self.chat_thread.running = False
+                    self.chat_thread.wait(1000)  # Wait up to 1 second
+
+                # Then send leave message
                 try:
-                    self.client_socket.shutdown(socket.SHUT_WR)  # Only shutdown writing
+                    leave_message = create_message(MessageType.LEAVE, self.username, "left the chat")
+                    self.client_socket.send(leave_message)
                 except:
-                    pass  # Socket might already be partially closed
-                    
+                    pass  # Ignore send errors during shutdown
+
+                # Finally close the socket
+                try:
+                    self.client_socket.shutdown(socket.SHUT_RDWR)
+                except:
+                    pass  # Socket might already be shutting down
                 self.client_socket.close()
-                
-                # 5. Wait for thread to finish
-                self.chat_thread.wait()
-                
-            except Exception as e:
-                print(f"Shutdown notice: {e}")  # Changed from error to notice
-                
-        event.accept()
+
+        except Exception as e:
+            print(f"Error during shutdown: {e}")
+        finally:
+            event.accept()
+            # Force quit if needed
+            QApplication.quit()
 
 def main():
     setup_logging()
     app = QApplication(sys.argv)
-    app.setStyle('Fusion')  # Modern look across platforms
     chat_window = ChatWindow()
     chat_window.show()
     sys.exit(app.exec())
