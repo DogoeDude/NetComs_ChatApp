@@ -5,6 +5,7 @@ from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
 from PyQt6.QtCore import Qt, QThread, pyqtSignal
 from PyQt6.QtGui import QFont, QColor
 import socket
+import logging
 from datetime import datetime
 from protocol import (
     MessageType, create_message, parse_message, format_message_for_display,
@@ -48,7 +49,7 @@ class ChatWindow(QMainWindow):
         self.connectToServer()
 
     def initUI(self):
-        self.setWindowTitle('Local Chat: CS3A')
+        self.setWindowTitle('LoChat')
         self.setMinimumSize(500, 600)
         self.setStyleSheet("""
             QMainWindow {
@@ -110,7 +111,7 @@ class ChatWindow(QMainWindow):
         layout.setSpacing(10)
 
         # Title
-        title = QLabel("Local Chat: CS3A")
+        title = QLabel("LoChat")
         title.setStyleSheet("""
             QLabel {
                 color: #0084ff;
@@ -175,24 +176,37 @@ Press Enter or click Send to send a message.</span>
             self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.client_socket.connect((HOST, PORT))
             
-            # Handshake process
+            # Log handshake steps
+            logging.info(f"Attempting handshake for user {username}")
+            
+            # Step 1: Send HELLO
             hello_msg = create_handshake_message(MessageType.HELLO)
             self.client_socket.send(hello_msg)
+            logging.info("Sent HELLO message")
             
+            # Step 2: Receive HELLO_ACK
             response = parse_message(self.client_socket.recv(1024))
+            logging.info(f"Received response: {response}")
             if response["type"] != MessageType.HELLO_ACK.value:
+                logging.error(f"Unexpected response during HELLO: {response}")
                 raise Exception("Handshake failed")
             
+            # Step 3: Send Username
             username_msg = create_message(MessageType.USERNAME, self.username, self.username)
             self.client_socket.send(username_msg)
+            logging.info(f"Sent USERNAME: {self.username}")
             
+            # Step 4: Receive USERNAME_ACK
             response = parse_message(self.client_socket.recv(1024))
+            logging.info(f"Received username response: {response}")
             if response["type"] != MessageType.USERNAME_ACK.value:
+                logging.error(f"Username not accepted: {response}")
                 raise Exception("Username not accepted")
 
             # Send join message
             join_message = create_message(MessageType.JOIN, self.username, "joined the chat")
             self.client_socket.send(join_message)
+            logging.info("Sent JOIN message")
 
             # Start receive thread
             self.chat_thread = ChatThread(self.client_socket)
@@ -204,6 +218,7 @@ Press Enter or click Send to send a message.</span>
             self.chat_display.append("Connected to server!")
 
         except Exception as e:
+            logging.error(f"Connection error: {e}")
             QMessageBox.critical(self, 'Connection Error', f'Could not connect to server: {str(e)}')
             self.close()
 
@@ -231,12 +246,11 @@ Press Enter or click Send to send a message.</span>
                     self.statusBar().showMessage(f'Error sending message: {str(e)}')
 
     def display_message(self, message):
-        # Check if message contains our username and highlight it if not our message
         if self.username in message and "[System]" not in message:
             if f"{self.username}:" not in message:  # Not our message
                 highlighted_message = message.replace(
                     self.username,
-                    f'<span style="color: #00ff00;">{self.username}</span>'  # Highlight mentions
+                    f'<span style="color: #00ff00;">{self.username}</span>'
                 )
                 self.chat_display.append(highlighted_message)
             else:

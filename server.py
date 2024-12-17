@@ -8,7 +8,7 @@ from protocol import (
 )
 
 HOST = '127.0.0.1'
-PORT = 8000
+PORT = 8000#anby ports below 1024 are for system services
 
 # Create logs directory if it doesn't exist
 if not os.path.exists('logs'):
@@ -87,6 +87,9 @@ def handle_client(client_socket):
         username_ack = create_handshake_message(MessageType.USERNAME_ACK)
         client_socket.send(username_ack)
         
+        # Log connection as fully connected HERE, before entering message loop
+        log_connection_status(ConnectionStatus.CONNECTED, f"Client {username} fully connected")
+        
         print(f"{username} joined the chat")
         
         # Now wait for normal chat messages
@@ -110,8 +113,6 @@ def handle_client(client_socket):
                 print(f"Error handling client {username}: {e}")
                 break
                 
-        log_connection_status(ConnectionStatus.CONNECTED, f"Client {username} fully connected")
-        
     except Exception as e:
         log_error("client_handler", str(e))
     
@@ -131,6 +132,7 @@ def accept_clients():
         thread.start()
 
 if __name__ == "__main__":
+    setup_logging()
     try:
         accept_clients()
     except KeyboardInterrupt:

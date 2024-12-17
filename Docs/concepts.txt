@@ -1,0 +1,69 @@
+TCP/IP Protocol
+
+    Socket programming using socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    Uses TCP for reliable, connection-oriented communication
+    IPv4 addressing (127.0.0.1 localhost)
+
+Client-Server Architecture
+
+    Server listens on a specific port (8000)
+    Supports multiple client connections using threading
+    Centralized communication model
+
+Network Protocol Design
+
+    Custom JSON-based message protocol
+    Defined message types (HELLO, JOIN, CHAT, etc.)
+    Handshake mechanism for connection establishment
+    Message parsing and formatting
+
+Concurrency
+
+    Multithreading (threading.Thread) to handle multiple client connections simultaneously
+    Allows concurrent client communication
+
+
+Network Communication Patterns
+
+    Connection establishment
+    Message exchange
+    Broadcast messaging
+    Graceful connection termination
+
+
+Socket Programming Techniques
+
+    Socket creation
+    Binding
+    Listening
+    Accepting connections
+    Sending/receiving data
+    Connection shutdown
+
+127.0.0.1 (Localhost):
+
+    Refers to the local machine's loopback network interface
+    Allows testing network applications without actual network connection
+    Enables communication between client and server on the same computer
+    Safe for development and local testing
+
+Port 8000:
+
+    Lower-numbered ports (0-1023) are reserved for well-known services
+    8000 is in the dynamic/private port range (49152-65535)
+    Commonly used for development and testing web/network applications
+    No specific protocol officially assigned
+    Not requiring administrator privileges to bind
+    Avoids conflicts with standard system services
+
+In this project, it's essentially an arbitrary choice for local development, 
+providing a convenient port for client-server communication that's unlikely to be in use by other applications.
+
+Library Purposes:
+    socket: Network communication, creating TCP/IP connections
+    threading: Concurrent client handling, multiple simultaneous connections
+    datetime: Timestamp generation for messages and logs
+    os: File and directory management (log directories)
+    json: Message serialization and deserialization
+    enum: Defining message type and connection status constants
+    logging: Structured logging of server and connection events

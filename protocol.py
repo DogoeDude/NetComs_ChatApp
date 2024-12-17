@@ -70,11 +70,10 @@ def parse_message(message: bytes) -> dict:
     return json.loads(message.decode('utf-8'))
 
 def format_message_for_display(msg_data: dict) -> str:
-    """Format a message dictionary for display"""
     if msg_data["type"] == "system":
         return f"[{msg_data['timestamp']}] System: {msg_data['content']}"
     else:
-        return f"[{msg_data['timestamp']}] {msg_data['username']}: {msg_data['content']}" 
+        return f"[{msg_data['timestamp']} {msg_data['username']}: {msg_data['content']}"
 
 def create_handshake_message(msg_type: MessageType) -> bytes:
     """Create a simple handshake message"""
