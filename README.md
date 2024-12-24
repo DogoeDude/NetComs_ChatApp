@@ -10,3 +10,4 @@ The server will be able to handle client disconnections and reconnects. The serv
 
 PYQT: https://doc.qt.io/qtforpython-6/
 
+Update: Update 1.0. This Application will develop into a much better application in the future. :)
