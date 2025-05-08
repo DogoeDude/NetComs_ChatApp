@@ -1,0 +1,609 @@
+[2025-05-08 09:34:44,127] INFO: Attempting handshake for user Reggie
+[2025-05-08 09:34:44,128] INFO: Sent HELLO message
+[2025-05-08 09:34:44,128] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 50697)
+[2025-05-08 09:34:44,128] INFO: Connection Status: Starting handshake - with ('127.0.0.1', 50697)
+[2025-05-08 09:34:44,128] INFO: Received response: {'type': 'hello_ack', 'content': 'HELLO_ACK'}
+[2025-05-08 09:34:44,129] INFO: Sent USERNAME: Reggie
+[2025-05-08 09:34:44,135] INFO: Received username response: {'type': 'username_accepted', 'content': 'USERNAME_ACCEPTED'}
+[2025-05-08 09:34:44,135] INFO: Sent JOIN message
+[2025-05-08 09:35:01,303] INFO: Attempting handshake for user James
+[2025-05-08 09:35:01,303] INFO: Sent HELLO message
+[2025-05-08 09:35:01,303] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 50717)
+[2025-05-08 09:35:01,304] INFO: Connection Status: Starting handshake - with ('127.0.0.1', 50717)
+[2025-05-08 09:35:01,304] INFO: Received response: {'type': 'hello_ack', 'content': 'HELLO_ACK'}
+[2025-05-08 09:35:01,305] INFO: Sent USERNAME: James
+[2025-05-08 09:35:01,306] INFO: Received username response: {'type': 'username_accepted', 'content': 'USERNAME_ACCEPTED'}
+[2025-05-08 09:35:01,306] INFO: Sent JOIN message
+[2025-05-08 09:49:50,817] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51686)
+[2025-05-08 09:49:50,817] ERROR: Error (handshake): Client ('127.0.0.1', 51686) didn't say HELLO
+[2025-05-08 09:49:50,817] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51687)
+[2025-05-08 09:49:50,817] ERROR: Error (handshake): Client ('127.0.0.1', 51687) didn't say HELLO
+[2025-05-08 09:49:50,817] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51688)
+[2025-05-08 09:49:51,834] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:49:51,834] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:49:51,834] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51690)
+[2025-05-08 09:49:51,834] ERROR: Error (handshake): Client ('127.0.0.1', 51690) didn't say HELLO
+[2025-05-08 09:49:51,834] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51691)
+[2025-05-08 09:49:51,834] ERROR: Error (handshake): Client ('127.0.0.1', 51691) didn't say HELLO
+[2025-05-08 09:49:51,834] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51692)
+[2025-05-08 09:49:51,834] ERROR: Error (handshake): Client ('127.0.0.1', 51692) didn't say HELLO
+[2025-05-08 09:49:51,840] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51693)
+[2025-05-08 09:49:51,840] ERROR: Error (handshake): Client ('127.0.0.1', 51693) didn't say HELLO
+[2025-05-08 09:49:51,841] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51694)
+[2025-05-08 09:49:51,841] ERROR: Error (handshake): Client ('127.0.0.1', 51694) didn't say HELLO
+[2025-05-08 09:49:51,842] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51695)
+[2025-05-08 09:49:52,353] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:49:52,353] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:49:52,356] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51696)
+[2025-05-08 09:49:52,356] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51697)
+[2025-05-08 09:49:52,356] ERROR: Error (handshake): Client ('127.0.0.1', 51696) didn't say HELLO
+[2025-05-08 09:49:52,356] ERROR: Error (handshake): Client ('127.0.0.1', 51697) didn't say HELLO
+[2025-05-08 09:49:52,356] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51698)
+[2025-05-08 09:49:52,357] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51699)
+[2025-05-08 09:49:52,357] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51700)
+[2025-05-08 09:49:52,357] ERROR: Error (handshake): Client ('127.0.0.1', 51699) didn't say HELLO
+[2025-05-08 09:49:52,358] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51701)
+[2025-05-08 09:49:52,358] ERROR: Error (handshake): Client ('127.0.0.1', 51701) didn't say HELLO
+[2025-05-08 09:49:52,359] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51702)
+[2025-05-08 09:49:52,359] ERROR: Error (handshake): Client ('127.0.0.1', 51702) didn't say HELLO
+[2025-05-08 09:49:52,360] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51703)
+[2025-05-08 09:49:52,360] ERROR: Error (handshake): Client ('127.0.0.1', 51703) didn't say HELLO
+[2025-05-08 09:49:52,361] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51704)
+[2025-05-08 09:49:52,361] ERROR: Error (handshake): Client ('127.0.0.1', 51704) didn't say HELLO
+[2025-05-08 09:49:52,865] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:49:52,865] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:49:53,364] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:49:53,364] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:49:54,785] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51706)
+[2025-05-08 09:49:54,785] ERROR: Error (handshake): Client ('127.0.0.1', 51706) didn't say HELLO
+[2025-05-08 09:49:54,788] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51707)
+[2025-05-08 09:49:54,788] ERROR: Error (handshake): Client ('127.0.0.1', 51707) didn't say HELLO
+[2025-05-08 09:49:54,790] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51708)
+[2025-05-08 09:49:54,826] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51710)
+[2025-05-08 09:49:54,827] ERROR: Error (handshake): Client ('127.0.0.1', 51710) didn't say HELLO
+[2025-05-08 09:49:54,828] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51711)
+[2025-05-08 09:49:54,828] ERROR: Error (handshake): Client ('127.0.0.1', 51711) didn't say HELLO
+[2025-05-08 09:49:54,830] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51712)
+[2025-05-08 09:49:54,830] ERROR: Error (handshake): Client ('127.0.0.1', 51712) didn't say HELLO
+[2025-05-08 09:49:54,833] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51713)
+[2025-05-08 09:49:54,838] ERROR: Error (handshake): Client ('127.0.0.1', 51713) didn't say HELLO
+[2025-05-08 09:49:54,840] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51714)
+[2025-05-08 09:49:54,842] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51715)
+[2025-05-08 09:49:54,842] ERROR: Error (handshake): Client ('127.0.0.1', 51715) didn't say HELLO
+[2025-05-08 09:49:55,341] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:49:55,341] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:49:55,796] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:49:55,796] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:49:55,898] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51717)
+[2025-05-08 09:49:55,899] ERROR: Error (handshake): Client ('127.0.0.1', 51717) didn't say HELLO
+[2025-05-08 09:49:55,899] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51718)
+[2025-05-08 09:49:55,900] ERROR: Error (handshake): Client ('127.0.0.1', 51718) didn't say HELLO
+[2025-05-08 09:49:55,900] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51719)
+[2025-05-08 09:49:56,902] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:49:56,902] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:49:56,903] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51721)
+[2025-05-08 09:49:56,903] ERROR: Error (handshake): Client ('127.0.0.1', 51721) didn't say HELLO
+[2025-05-08 09:49:56,904] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51722)
+[2025-05-08 09:49:56,904] ERROR: Error (handshake): Client ('127.0.0.1', 51722) didn't say HELLO
+[2025-05-08 09:49:56,905] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51723)
+[2025-05-08 09:49:56,905] ERROR: Error (handshake): Client ('127.0.0.1', 51723) didn't say HELLO
+[2025-05-08 09:49:56,906] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51724)
+[2025-05-08 09:49:56,906] ERROR: Error (handshake): Client ('127.0.0.1', 51724) didn't say HELLO
+[2025-05-08 09:49:56,908] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51725)
+[2025-05-08 09:49:56,908] ERROR: Error (handshake): Client ('127.0.0.1', 51725) didn't say HELLO
+[2025-05-08 09:49:56,909] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51726)
+[2025-05-08 09:49:57,417] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:49:57,417] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:49:57,417] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51727)
+[2025-05-08 09:49:57,417] ERROR: Error (handshake): Client ('127.0.0.1', 51727) didn't say HELLO
+[2025-05-08 09:49:57,417] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51728)
+[2025-05-08 09:49:57,417] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51729)
+[2025-05-08 09:49:57,417] ERROR: Error (handshake): Client ('127.0.0.1', 51728) didn't say HELLO
+[2025-05-08 09:49:57,417] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51730)
+[2025-05-08 09:49:57,417] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51731)
+[2025-05-08 09:49:57,417] ERROR: Error (handshake): Client ('127.0.0.1', 51730) didn't say HELLO
+[2025-05-08 09:49:57,417] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51732)
+[2025-05-08 09:49:57,417] ERROR: Error (handshake): Client ('127.0.0.1', 51732) didn't say HELLO
+[2025-05-08 09:49:57,423] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51733)
+[2025-05-08 09:49:57,423] ERROR: Error (handshake): Client ('127.0.0.1', 51733) didn't say HELLO
+[2025-05-08 09:49:57,424] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51734)
+[2025-05-08 09:49:57,424] ERROR: Error (handshake): Client ('127.0.0.1', 51734) didn't say HELLO
+[2025-05-08 09:49:57,424] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51735)
+[2025-05-08 09:49:57,425] ERROR: Error (handshake): Client ('127.0.0.1', 51735) didn't say HELLO
+[2025-05-08 09:49:57,924] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:49:57,924] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:49:58,429] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:49:58,430] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:49:59,756] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51740)
+[2025-05-08 09:49:59,756] ERROR: Error (handshake): Client ('127.0.0.1', 51740) didn't say HELLO
+[2025-05-08 09:49:59,758] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51741)
+[2025-05-08 09:49:59,758] ERROR: Error (handshake): Client ('127.0.0.1', 51741) didn't say HELLO
+[2025-05-08 09:49:59,760] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51742)
+[2025-05-08 09:49:59,787] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51743)
+[2025-05-08 09:49:59,787] ERROR: Error (handshake): Client ('127.0.0.1', 51743) didn't say HELLO
+[2025-05-08 09:49:59,789] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51744)
+[2025-05-08 09:49:59,789] ERROR: Error (handshake): Client ('127.0.0.1', 51744) didn't say HELLO
+[2025-05-08 09:49:59,791] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51745)
+[2025-05-08 09:49:59,791] ERROR: Error (handshake): Client ('127.0.0.1', 51745) didn't say HELLO
+[2025-05-08 09:49:59,792] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51746)
+[2025-05-08 09:49:59,793] ERROR: Error (handshake): Client ('127.0.0.1', 51746) didn't say HELLO
+[2025-05-08 09:49:59,794] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51747)
+[2025-05-08 09:49:59,794] ERROR: Error (handshake): Client ('127.0.0.1', 51747) didn't say HELLO
+[2025-05-08 09:49:59,796] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51748)
+[2025-05-08 09:50:00,305] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:00,305] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:00,767] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:00,767] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:00,871] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51750)
+[2025-05-08 09:50:00,871] ERROR: Error (handshake): Client ('127.0.0.1', 51750) didn't say HELLO
+[2025-05-08 09:50:00,872] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51751)
+[2025-05-08 09:50:00,872] ERROR: Error (handshake): Client ('127.0.0.1', 51751) didn't say HELLO
+[2025-05-08 09:50:00,872] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51752)
+[2025-05-08 09:50:01,876] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:01,876] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:01,876] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51756)
+[2025-05-08 09:50:01,876] ERROR: Error (handshake): Client ('127.0.0.1', 51756) didn't say HELLO
+[2025-05-08 09:50:01,876] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51757)
+[2025-05-08 09:50:01,876] ERROR: Error (handshake): Client ('127.0.0.1', 51757) didn't say HELLO
+[2025-05-08 09:50:01,876] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51758)
+[2025-05-08 09:50:01,876] ERROR: Error (handshake): Client ('127.0.0.1', 51758) didn't say HELLO
+[2025-05-08 09:50:01,876] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51759)
+[2025-05-08 09:50:01,876] ERROR: Error (handshake): Client ('127.0.0.1', 51759) didn't say HELLO
+[2025-05-08 09:50:01,876] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51760)
+[2025-05-08 09:50:01,876] ERROR: Error (handshake): Client ('127.0.0.1', 51760) didn't say HELLO
+[2025-05-08 09:50:01,883] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51761)
+[2025-05-08 09:50:02,396] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:02,396] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:02,398] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51764)
+[2025-05-08 09:50:02,398] ERROR: Error (handshake): Client ('127.0.0.1', 51764) didn't say HELLO
+[2025-05-08 09:50:02,398] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51765)
+[2025-05-08 09:50:02,398] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51766)
+[2025-05-08 09:50:02,399] ERROR: Error (handshake): Client ('127.0.0.1', 51765) didn't say HELLO
+[2025-05-08 09:50:02,399] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51767)
+[2025-05-08 09:50:02,399] ERROR: Error (handshake): Client ('127.0.0.1', 51767) didn't say HELLO
+[2025-05-08 09:50:02,399] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51768)
+[2025-05-08 09:50:02,400] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51769)
+[2025-05-08 09:50:02,400] ERROR: Error (handshake): Client ('127.0.0.1', 51769) didn't say HELLO
+[2025-05-08 09:50:02,401] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51770)
+[2025-05-08 09:50:02,401] ERROR: Error (handshake): Client ('127.0.0.1', 51770) didn't say HELLO
+[2025-05-08 09:50:02,402] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51771)
+[2025-05-08 09:50:02,402] ERROR: Error (handshake): Client ('127.0.0.1', 51771) didn't say HELLO
+[2025-05-08 09:50:02,403] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51772)
+[2025-05-08 09:50:02,403] ERROR: Error (handshake): Client ('127.0.0.1', 51772) didn't say HELLO
+[2025-05-08 09:50:02,910] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:02,910] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:03,408] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:03,408] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:04,934] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51779)
+[2025-05-08 09:50:04,935] ERROR: Error (handshake): Client ('127.0.0.1', 51779) didn't say HELLO
+[2025-05-08 09:50:04,938] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51780)
+[2025-05-08 09:50:04,942] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51781)
+[2025-05-08 09:50:04,942] ERROR: Error (handshake): Client ('127.0.0.1', 51781) didn't say HELLO
+[2025-05-08 09:50:04,944] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51782)
+[2025-05-08 09:50:04,945] ERROR: Error (handshake): Client ('127.0.0.1', 51782) didn't say HELLO
+[2025-05-08 09:50:04,946] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51783)
+[2025-05-08 09:50:04,947] ERROR: Error (handshake): Client ('127.0.0.1', 51783) didn't say HELLO
+[2025-05-08 09:50:04,948] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51784)
+[2025-05-08 09:50:04,948] ERROR: Error (handshake): Client ('127.0.0.1', 51784) didn't say HELLO
+[2025-05-08 09:50:04,950] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51785)
+[2025-05-08 09:50:04,951] ERROR: Error (handshake): Client ('127.0.0.1', 51785) didn't say HELLO
+[2025-05-08 09:50:04,955] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51786)
+[2025-05-08 09:50:04,956] ERROR: Error (handshake): Client ('127.0.0.1', 51786) didn't say HELLO
+[2025-05-08 09:50:04,959] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51787)
+[2025-05-08 09:50:05,465] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:05,465] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:05,951] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:05,951] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:06,054] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51790)
+[2025-05-08 09:50:06,054] ERROR: Error (handshake): Client ('127.0.0.1', 51790) didn't say HELLO
+[2025-05-08 09:50:06,055] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51791)
+[2025-05-08 09:50:06,055] ERROR: Error (handshake): Client ('127.0.0.1', 51791) didn't say HELLO
+[2025-05-08 09:50:06,056] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51792)
+[2025-05-08 09:50:07,065] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:07,065] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:07,066] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51796)
+[2025-05-08 09:50:07,066] ERROR: Error (handshake): Client ('127.0.0.1', 51796) didn't say HELLO
+[2025-05-08 09:50:07,067] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51797)
+[2025-05-08 09:50:07,068] ERROR: Error (handshake): Client ('127.0.0.1', 51797) didn't say HELLO
+[2025-05-08 09:50:07,068] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51798)
+[2025-05-08 09:50:07,069] ERROR: Error (handshake): Client ('127.0.0.1', 51798) didn't say HELLO
+[2025-05-08 09:50:07,069] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51799)
+[2025-05-08 09:50:07,070] ERROR: Error (handshake): Client ('127.0.0.1', 51799) didn't say HELLO
+[2025-05-08 09:50:07,070] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51800)
+[2025-05-08 09:50:07,071] ERROR: Error (handshake): Client ('127.0.0.1', 51800) didn't say HELLO
+[2025-05-08 09:50:07,071] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51801)
+[2025-05-08 09:50:07,582] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:07,582] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:07,583] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51802)
+[2025-05-08 09:50:07,583] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51803)
+[2025-05-08 09:50:07,584] ERROR: Error (handshake): Client ('127.0.0.1', 51802) didn't say HELLO
+[2025-05-08 09:50:07,584] ERROR: Error (handshake): Client ('127.0.0.1', 51803) didn't say HELLO
+[2025-05-08 09:50:07,584] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51804)
+[2025-05-08 09:50:07,584] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51805)
+[2025-05-08 09:50:07,585] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51806)
+[2025-05-08 09:50:07,585] ERROR: Error (handshake): Client ('127.0.0.1', 51805) didn't say HELLO
+[2025-05-08 09:50:07,585] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51807)
+[2025-05-08 09:50:07,586] ERROR: Error (handshake): Client ('127.0.0.1', 51807) didn't say HELLO
+[2025-05-08 09:50:07,586] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51808)
+[2025-05-08 09:50:07,587] ERROR: Error (handshake): Client ('127.0.0.1', 51808) didn't say HELLO
+[2025-05-08 09:50:07,587] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51809)
+[2025-05-08 09:50:07,588] ERROR: Error (handshake): Client ('127.0.0.1', 51809) didn't say HELLO
+[2025-05-08 09:50:07,588] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51810)
+[2025-05-08 09:50:07,589] ERROR: Error (handshake): Client ('127.0.0.1', 51810) didn't say HELLO
+[2025-05-08 09:50:08,096] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:08,097] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:08,589] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:08,589] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:10,009] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51819)
+[2025-05-08 09:50:10,009] ERROR: Error (handshake): Client ('127.0.0.1', 51819) didn't say HELLO
+[2025-05-08 09:50:10,011] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51820)
+[2025-05-08 09:50:10,012] ERROR: Error (handshake): Client ('127.0.0.1', 51820) didn't say HELLO
+[2025-05-08 09:50:10,014] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51821)
+[2025-05-08 09:50:10,026] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51822)
+[2025-05-08 09:50:10,026] ERROR: Error (handshake): Client ('127.0.0.1', 51822) didn't say HELLO
+[2025-05-08 09:50:10,028] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51823)
+[2025-05-08 09:50:10,028] ERROR: Error (handshake): Client ('127.0.0.1', 51823) didn't say HELLO
+[2025-05-08 09:50:10,030] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51824)
+[2025-05-08 09:50:10,030] ERROR: Error (handshake): Client ('127.0.0.1', 51824) didn't say HELLO
+[2025-05-08 09:50:10,031] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51825)
+[2025-05-08 09:50:10,032] ERROR: Error (handshake): Client ('127.0.0.1', 51825) didn't say HELLO
+[2025-05-08 09:50:10,033] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51826)
+[2025-05-08 09:50:10,033] ERROR: Error (handshake): Client ('127.0.0.1', 51826) didn't say HELLO
+[2025-05-08 09:50:10,035] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51827)
+[2025-05-08 09:50:10,547] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:10,547] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:11,027] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:11,027] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:11,155] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51829)
+[2025-05-08 09:50:11,155] ERROR: Error (handshake): Client ('127.0.0.1', 51829) didn't say HELLO
+[2025-05-08 09:50:11,156] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51830)
+[2025-05-08 09:50:11,156] ERROR: Error (handshake): Client ('127.0.0.1', 51830) didn't say HELLO
+[2025-05-08 09:50:11,157] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51831)
+[2025-05-08 09:50:12,158] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:12,158] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:12,159] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51835)
+[2025-05-08 09:50:12,159] ERROR: Error (handshake): Client ('127.0.0.1', 51835) didn't say HELLO
+[2025-05-08 09:50:12,160] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51836)
+[2025-05-08 09:50:12,160] ERROR: Error (handshake): Client ('127.0.0.1', 51836) didn't say HELLO
+[2025-05-08 09:50:12,161] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51837)
+[2025-05-08 09:50:12,161] ERROR: Error (handshake): Client ('127.0.0.1', 51837) didn't say HELLO
+[2025-05-08 09:50:12,162] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51838)
+[2025-05-08 09:50:12,162] ERROR: Error (handshake): Client ('127.0.0.1', 51838) didn't say HELLO
+[2025-05-08 09:50:12,163] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51839)
+[2025-05-08 09:50:12,163] ERROR: Error (handshake): Client ('127.0.0.1', 51839) didn't say HELLO
+[2025-05-08 09:50:12,164] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51840)
+[2025-05-08 09:50:12,677] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:12,677] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:12,679] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51843)
+[2025-05-08 09:50:12,679] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51844)
+[2025-05-08 09:50:12,679] ERROR: Error (handshake): Client ('127.0.0.1', 51843) didn't say HELLO
+[2025-05-08 09:50:12,679] ERROR: Error (handshake): Client ('127.0.0.1', 51844) didn't say HELLO
+[2025-05-08 09:50:12,680] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51845)
+[2025-05-08 09:50:12,680] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51846)
+[2025-05-08 09:50:12,680] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51847)
+[2025-05-08 09:50:12,680] ERROR: Error (handshake): Client ('127.0.0.1', 51846) didn't say HELLO
+[2025-05-08 09:50:12,681] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51848)
+[2025-05-08 09:50:12,681] ERROR: Error (handshake): Client ('127.0.0.1', 51848) didn't say HELLO
+[2025-05-08 09:50:12,682] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51849)
+[2025-05-08 09:50:12,682] ERROR: Error (handshake): Client ('127.0.0.1', 51849) didn't say HELLO
+[2025-05-08 09:50:12,683] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51850)
+[2025-05-08 09:50:12,684] ERROR: Error (handshake): Client ('127.0.0.1', 51850) didn't say HELLO
+[2025-05-08 09:50:12,684] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51851)
+[2025-05-08 09:50:12,685] ERROR: Error (handshake): Client ('127.0.0.1', 51851) didn't say HELLO
+[2025-05-08 09:50:13,180] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:13,180] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:13,683] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:13,683] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:15,194] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51855)
+[2025-05-08 09:50:15,194] ERROR: Error (handshake): Client ('127.0.0.1', 51855) didn't say HELLO
+[2025-05-08 09:50:15,199] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51856)
+[2025-05-08 09:50:15,212] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51857)
+[2025-05-08 09:50:15,212] ERROR: Error (handshake): Client ('127.0.0.1', 51857) didn't say HELLO
+[2025-05-08 09:50:15,214] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51858)
+[2025-05-08 09:50:15,214] ERROR: Error (handshake): Client ('127.0.0.1', 51858) didn't say HELLO
+[2025-05-08 09:50:15,216] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51859)
+[2025-05-08 09:50:15,216] ERROR: Error (handshake): Client ('127.0.0.1', 51859) didn't say HELLO
+[2025-05-08 09:50:15,218] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51860)
+[2025-05-08 09:50:15,218] ERROR: Error (handshake): Client ('127.0.0.1', 51860) didn't say HELLO
+[2025-05-08 09:50:15,220] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51861)
+[2025-05-08 09:50:15,220] ERROR: Error (handshake): Client ('127.0.0.1', 51861) didn't say HELLO
+[2025-05-08 09:50:15,221] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51862)
+[2025-05-08 09:50:15,222] ERROR: Error (handshake): Client ('127.0.0.1', 51862) didn't say HELLO
+[2025-05-08 09:50:15,224] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51863)
+[2025-05-08 09:50:15,737] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:15,737] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:16,198] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:16,198] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:56,594] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51911)
+[2025-05-08 09:50:56,594] ERROR: Error (handshake): Client ('127.0.0.1', 51911) didn't say HELLO
+[2025-05-08 09:50:56,595] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51912)
+[2025-05-08 09:50:56,595] ERROR: Error (handshake): Client ('127.0.0.1', 51912) didn't say HELLO
+[2025-05-08 09:50:56,596] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51913)
+[2025-05-08 09:50:56,596] ERROR: Error (handshake): Client ('127.0.0.1', 51913) didn't say HELLO
+[2025-05-08 09:50:56,597] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51914)
+[2025-05-08 09:50:56,597] ERROR: Error (handshake): Client ('127.0.0.1', 51914) didn't say HELLO
+[2025-05-08 09:50:56,598] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51915)
+[2025-05-08 09:50:56,598] ERROR: Error (handshake): Client ('127.0.0.1', 51915) didn't say HELLO
+[2025-05-08 09:50:56,599] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51916)
+[2025-05-08 09:50:57,108] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:57,108] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:57,110] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51917)
+[2025-05-08 09:50:57,111] ERROR: Error (handshake): Client ('127.0.0.1', 51917) didn't say HELLO
+[2025-05-08 09:50:57,111] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51918)
+[2025-05-08 09:50:57,111] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51919)
+[2025-05-08 09:50:57,111] ERROR: Error (handshake): Client ('127.0.0.1', 51918) didn't say HELLO
+[2025-05-08 09:50:57,112] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51920)
+[2025-05-08 09:50:57,112] ERROR: Error (handshake): Client ('127.0.0.1', 51920) didn't say HELLO
+[2025-05-08 09:50:57,112] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51921)
+[2025-05-08 09:50:57,113] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51922)
+[2025-05-08 09:50:57,113] ERROR: Error (handshake): Client ('127.0.0.1', 51922) didn't say HELLO
+[2025-05-08 09:50:57,114] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51923)
+[2025-05-08 09:50:57,114] ERROR: Error (handshake): Client ('127.0.0.1', 51923) didn't say HELLO
+[2025-05-08 09:50:57,115] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51924)
+[2025-05-08 09:50:57,115] ERROR: Error (handshake): Client ('127.0.0.1', 51924) didn't say HELLO
+[2025-05-08 09:50:57,116] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51925)
+[2025-05-08 09:50:57,116] ERROR: Error (handshake): Client ('127.0.0.1', 51925) didn't say HELLO
+[2025-05-08 09:50:57,619] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:57,619] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:58,116] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:50:58,116] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:50:59,528] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51927)
+[2025-05-08 09:50:59,529] ERROR: Error (handshake): Client ('127.0.0.1', 51927) didn't say HELLO
+[2025-05-08 09:50:59,531] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51928)
+[2025-05-08 09:50:59,531] ERROR: Error (handshake): Client ('127.0.0.1', 51928) didn't say HELLO
+[2025-05-08 09:50:59,533] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51929)
+[2025-05-08 09:50:59,550] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51930)
+[2025-05-08 09:50:59,551] ERROR: Error (handshake): Client ('127.0.0.1', 51930) didn't say HELLO
+[2025-05-08 09:50:59,553] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51931)
+[2025-05-08 09:50:59,553] ERROR: Error (handshake): Client ('127.0.0.1', 51931) didn't say HELLO
+[2025-05-08 09:50:59,554] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51932)
+[2025-05-08 09:50:59,555] ERROR: Error (handshake): Client ('127.0.0.1', 51932) didn't say HELLO
+[2025-05-08 09:50:59,556] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51933)
+[2025-05-08 09:50:59,557] ERROR: Error (handshake): Client ('127.0.0.1', 51933) didn't say HELLO
+[2025-05-08 09:50:59,558] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51934)
+[2025-05-08 09:50:59,558] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51935)
+[2025-05-08 09:50:59,565] ERROR: Error (handshake): Client ('127.0.0.1', 51935) didn't say HELLO
+[2025-05-08 09:51:00,057] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:00,057] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:00,533] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:00,533] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:00,663] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51936)
+[2025-05-08 09:51:00,663] ERROR: Error (handshake): Client ('127.0.0.1', 51936) didn't say HELLO
+[2025-05-08 09:51:00,664] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51937)
+[2025-05-08 09:51:00,664] ERROR: Error (handshake): Client ('127.0.0.1', 51937) didn't say HELLO
+[2025-05-08 09:51:00,665] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51938)
+[2025-05-08 09:51:01,667] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:01,667] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:01,668] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51939)
+[2025-05-08 09:51:01,668] ERROR: Error (handshake): Client ('127.0.0.1', 51939) didn't say HELLO
+[2025-05-08 09:51:01,669] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51940)
+[2025-05-08 09:51:01,669] ERROR: Error (handshake): Client ('127.0.0.1', 51940) didn't say HELLO
+[2025-05-08 09:51:01,670] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51941)
+[2025-05-08 09:51:01,670] ERROR: Error (handshake): Client ('127.0.0.1', 51941) didn't say HELLO
+[2025-05-08 09:51:01,671] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51942)
+[2025-05-08 09:51:01,671] ERROR: Error (handshake): Client ('127.0.0.1', 51942) didn't say HELLO
+[2025-05-08 09:51:01,672] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51943)
+[2025-05-08 09:51:01,672] ERROR: Error (handshake): Client ('127.0.0.1', 51943) didn't say HELLO
+[2025-05-08 09:51:01,673] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51944)
+[2025-05-08 09:51:02,183] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:02,183] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:02,184] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51945)
+[2025-05-08 09:51:02,185] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51946)
+[2025-05-08 09:51:02,185] ERROR: Error (handshake): Client ('127.0.0.1', 51945) didn't say HELLO
+[2025-05-08 09:51:02,185] ERROR: Error (handshake): Client ('127.0.0.1', 51946) didn't say HELLO
+[2025-05-08 09:51:02,185] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51947)
+[2025-05-08 09:51:02,185] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51948)
+[2025-05-08 09:51:02,186] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51949)
+[2025-05-08 09:51:02,186] ERROR: Error (handshake): Client ('127.0.0.1', 51948) didn't say HELLO
+[2025-05-08 09:51:02,187] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51950)
+[2025-05-08 09:51:02,187] ERROR: Error (handshake): Client ('127.0.0.1', 51950) didn't say HELLO
+[2025-05-08 09:51:02,188] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51951)
+[2025-05-08 09:51:02,188] ERROR: Error (handshake): Client ('127.0.0.1', 51951) didn't say HELLO
+[2025-05-08 09:51:02,189] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51952)
+[2025-05-08 09:51:02,189] ERROR: Error (handshake): Client ('127.0.0.1', 51952) didn't say HELLO
+[2025-05-08 09:51:02,190] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51953)
+[2025-05-08 09:51:02,190] ERROR: Error (handshake): Client ('127.0.0.1', 51953) didn't say HELLO
+[2025-05-08 09:51:02,696] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:02,696] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:03,197] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:03,198] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:04,606] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51954)
+[2025-05-08 09:51:04,606] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51955)
+[2025-05-08 09:51:04,608] ERROR: Error (handshake): Client ('127.0.0.1', 51954) didn't say HELLO
+[2025-05-08 09:51:04,608] ERROR: Error (handshake): Client ('127.0.0.1', 51955) didn't say HELLO
+[2025-05-08 09:51:04,611] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51957)
+[2025-05-08 09:51:04,611] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51956)
+[2025-05-08 09:51:04,611] ERROR: Error (handshake): Client ('127.0.0.1', 51957) didn't say HELLO
+[2025-05-08 09:51:04,613] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51958)
+[2025-05-08 09:51:04,613] ERROR: Error (handshake): Client ('127.0.0.1', 51958) didn't say HELLO
+[2025-05-08 09:51:04,615] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51959)
+[2025-05-08 09:51:04,615] ERROR: Error (handshake): Client ('127.0.0.1', 51959) didn't say HELLO
+[2025-05-08 09:51:04,616] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51960)
+[2025-05-08 09:51:04,616] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51961)
+[2025-05-08 09:51:04,617] ERROR: Error (handshake): Client ('127.0.0.1', 51961) didn't say HELLO
+[2025-05-08 09:51:04,619] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51962)
+[2025-05-08 09:51:04,619] ERROR: Error (handshake): Client ('127.0.0.1', 51962) didn't say HELLO
+[2025-05-08 09:51:05,117] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:05,117] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:05,621] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:05,621] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:05,728] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51963)
+[2025-05-08 09:51:05,729] ERROR: Error (handshake): Client ('127.0.0.1', 51963) didn't say HELLO
+[2025-05-08 09:51:05,729] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51964)
+[2025-05-08 09:51:05,730] ERROR: Error (handshake): Client ('127.0.0.1', 51964) didn't say HELLO
+[2025-05-08 09:51:05,730] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51965)
+[2025-05-08 09:51:06,744] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:06,744] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:06,745] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51966)
+[2025-05-08 09:51:06,745] ERROR: Error (handshake): Client ('127.0.0.1', 51966) didn't say HELLO
+[2025-05-08 09:51:06,746] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51967)
+[2025-05-08 09:51:06,746] ERROR: Error (handshake): Client ('127.0.0.1', 51967) didn't say HELLO
+[2025-05-08 09:51:06,747] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51968)
+[2025-05-08 09:51:06,747] ERROR: Error (handshake): Client ('127.0.0.1', 51968) didn't say HELLO
+[2025-05-08 09:51:06,748] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51969)
+[2025-05-08 09:51:06,748] ERROR: Error (handshake): Client ('127.0.0.1', 51969) didn't say HELLO
+[2025-05-08 09:51:06,749] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51970)
+[2025-05-08 09:51:06,749] ERROR: Error (handshake): Client ('127.0.0.1', 51970) didn't say HELLO
+[2025-05-08 09:51:06,750] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51971)
+[2025-05-08 09:51:07,260] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:07,260] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:07,262] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51972)
+[2025-05-08 09:51:07,262] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51973)
+[2025-05-08 09:51:07,262] ERROR: Error (handshake): Client ('127.0.0.1', 51972) didn't say HELLO
+[2025-05-08 09:51:07,262] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51974)
+[2025-05-08 09:51:07,263] ERROR: Error (handshake): Client ('127.0.0.1', 51973) didn't say HELLO
+[2025-05-08 09:51:07,263] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51975)
+[2025-05-08 09:51:07,263] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51976)
+[2025-05-08 09:51:07,264] ERROR: Error (handshake): Client ('127.0.0.1', 51975) didn't say HELLO
+[2025-05-08 09:51:07,264] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51977)
+[2025-05-08 09:51:07,265] ERROR: Error (handshake): Client ('127.0.0.1', 51977) didn't say HELLO
+[2025-05-08 09:51:07,265] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51978)
+[2025-05-08 09:51:07,266] ERROR: Error (handshake): Client ('127.0.0.1', 51978) didn't say HELLO
+[2025-05-08 09:51:07,266] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51979)
+[2025-05-08 09:51:07,266] ERROR: Error (handshake): Client ('127.0.0.1', 51979) didn't say HELLO
+[2025-05-08 09:51:07,267] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51980)
+[2025-05-08 09:51:07,268] ERROR: Error (handshake): Client ('127.0.0.1', 51980) didn't say HELLO
+[2025-05-08 09:51:07,775] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:07,775] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:08,272] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:08,272] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:09,720] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51981)
+[2025-05-08 09:51:09,721] ERROR: Error (handshake): Client ('127.0.0.1', 51981) didn't say HELLO
+[2025-05-08 09:51:09,722] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51982)
+[2025-05-08 09:51:09,722] ERROR: Error (handshake): Client ('127.0.0.1', 51982) didn't say HELLO
+[2025-05-08 09:51:09,723] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51983)
+[2025-05-08 09:51:09,724] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51984)
+[2025-05-08 09:51:09,724] ERROR: Error (handshake): Client ('127.0.0.1', 51984) didn't say HELLO
+[2025-05-08 09:51:09,726] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51985)
+[2025-05-08 09:51:09,726] ERROR: Error (handshake): Client ('127.0.0.1', 51985) didn't say HELLO
+[2025-05-08 09:51:09,727] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51986)
+[2025-05-08 09:51:09,728] ERROR: Error (handshake): Client ('127.0.0.1', 51986) didn't say HELLO
+[2025-05-08 09:51:09,729] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51987)
+[2025-05-08 09:51:09,729] ERROR: Error (handshake): Client ('127.0.0.1', 51987) didn't say HELLO
+[2025-05-08 09:51:09,730] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51988)
+[2025-05-08 09:51:09,731] ERROR: Error (handshake): Client ('127.0.0.1', 51988) didn't say HELLO
+[2025-05-08 09:51:09,733] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51989)
+[2025-05-08 09:51:10,236] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:10,236] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:10,735] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:10,735] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:10,870] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51990)
+[2025-05-08 09:51:10,870] ERROR: Error (handshake): Client ('127.0.0.1', 51990) didn't say HELLO
+[2025-05-08 09:51:10,871] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51991)
+[2025-05-08 09:51:10,871] ERROR: Error (handshake): Client ('127.0.0.1', 51991) didn't say HELLO
+[2025-05-08 09:51:10,872] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51992)
+[2025-05-08 09:51:11,877] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:11,877] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:11,878] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51993)
+[2025-05-08 09:51:11,878] ERROR: Error (handshake): Client ('127.0.0.1', 51993) didn't say HELLO
+[2025-05-08 09:51:11,880] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51994)
+[2025-05-08 09:51:11,880] ERROR: Error (handshake): Client ('127.0.0.1', 51994) didn't say HELLO
+[2025-05-08 09:51:11,881] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51995)
+[2025-05-08 09:51:11,881] ERROR: Error (handshake): Client ('127.0.0.1', 51995) didn't say HELLO
+[2025-05-08 09:51:11,882] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51996)
+[2025-05-08 09:51:11,882] ERROR: Error (handshake): Client ('127.0.0.1', 51996) didn't say HELLO
+[2025-05-08 09:51:11,883] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51997)
+[2025-05-08 09:51:11,883] ERROR: Error (handshake): Client ('127.0.0.1', 51997) didn't say HELLO
+[2025-05-08 09:51:11,884] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51998)
+[2025-05-08 09:51:12,392] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:12,392] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:12,392] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 51999)
+[2025-05-08 09:51:12,392] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52000)
+[2025-05-08 09:51:12,392] ERROR: Error (handshake): Client ('127.0.0.1', 51999) didn't say HELLO
+[2025-05-08 09:51:12,392] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52001)
+[2025-05-08 09:51:12,392] ERROR: Error (handshake): Client ('127.0.0.1', 52000) didn't say HELLO
+[2025-05-08 09:51:12,392] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52002)
+[2025-05-08 09:51:12,392] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52003)
+[2025-05-08 09:51:12,392] ERROR: Error (handshake): Client ('127.0.0.1', 52002) didn't say HELLO
+[2025-05-08 09:51:12,392] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52004)
+[2025-05-08 09:51:12,392] ERROR: Error (handshake): Client ('127.0.0.1', 52004) didn't say HELLO
+[2025-05-08 09:51:12,392] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52005)
+[2025-05-08 09:51:12,392] ERROR: Error (handshake): Client ('127.0.0.1', 52005) didn't say HELLO
+[2025-05-08 09:51:12,399] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52006)
+[2025-05-08 09:51:12,399] ERROR: Error (handshake): Client ('127.0.0.1', 52006) didn't say HELLO
+[2025-05-08 09:51:12,400] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52007)
+[2025-05-08 09:51:12,400] ERROR: Error (handshake): Client ('127.0.0.1', 52007) didn't say HELLO
+[2025-05-08 09:51:12,893] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:12,893] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:13,398] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:13,398] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:14,858] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52014)
+[2025-05-08 09:51:14,858] ERROR: Error (handshake): Client ('127.0.0.1', 52014) didn't say HELLO
+[2025-05-08 09:51:14,860] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52015)
+[2025-05-08 09:51:14,861] ERROR: Error (handshake): Client ('127.0.0.1', 52015) didn't say HELLO
+[2025-05-08 09:51:14,862] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52016)
+[2025-05-08 09:51:14,863] ERROR: Error (handshake): Client ('127.0.0.1', 52016) didn't say HELLO
+[2025-05-08 09:51:14,864] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52017)
+[2025-05-08 09:51:14,865] ERROR: Error (handshake): Client ('127.0.0.1', 52017) didn't say HELLO
+[2025-05-08 09:51:14,867] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52018)
+[2025-05-08 09:51:14,868] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52019)
+[2025-05-08 09:51:14,868] ERROR: Error (handshake): Client ('127.0.0.1', 52019) didn't say HELLO
+[2025-05-08 09:51:14,869] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52020)
+[2025-05-08 09:51:14,870] ERROR: Error (handshake): Client ('127.0.0.1', 52020) didn't say HELLO
+[2025-05-08 09:51:14,871] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52021)
+[2025-05-08 09:51:14,872] ERROR: Error (handshake): Client ('127.0.0.1', 52021) didn't say HELLO
+[2025-05-08 09:51:14,873] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52022)
+[2025-05-08 09:51:15,380] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:15,380] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:15,882] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:15,882] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:16,021] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52025)
+[2025-05-08 09:51:16,021] ERROR: Error (handshake): Client ('127.0.0.1', 52025) didn't say HELLO
+[2025-05-08 09:51:16,021] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52026)
+[2025-05-08 09:51:16,021] ERROR: Error (handshake): Client ('127.0.0.1', 52026) didn't say HELLO
+[2025-05-08 09:51:16,027] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52027)
+[2025-05-08 09:51:17,027] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:17,027] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:17,027] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52028)
+[2025-05-08 09:51:17,027] ERROR: Error (handshake): Client ('127.0.0.1', 52028) didn't say HELLO
+[2025-05-08 09:51:17,027] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52029)
+[2025-05-08 09:51:17,027] ERROR: Error (handshake): Client ('127.0.0.1', 52029) didn't say HELLO
+[2025-05-08 09:51:17,027] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52030)
+[2025-05-08 09:51:17,027] ERROR: Error (handshake): Client ('127.0.0.1', 52030) didn't say HELLO
+[2025-05-08 09:51:17,027] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52031)
+[2025-05-08 09:51:17,027] ERROR: Error (handshake): Client ('127.0.0.1', 52031) didn't say HELLO
+[2025-05-08 09:51:17,027] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52032)
+[2025-05-08 09:51:17,027] ERROR: Error (handshake): Client ('127.0.0.1', 52032) didn't say HELLO
+[2025-05-08 09:51:17,027] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52033)
+[2025-05-08 09:51:17,528] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:17,528] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:17,528] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52034)
+[2025-05-08 09:51:17,528] ERROR: Error (handshake): Client ('127.0.0.1', 52034) didn't say HELLO
+[2025-05-08 09:51:17,528] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52035)
+[2025-05-08 09:51:17,528] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52036)
+[2025-05-08 09:51:17,528] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52037)
+[2025-05-08 09:51:17,528] ERROR: Error (handshake): Client ('127.0.0.1', 52036) didn't say HELLO
+[2025-05-08 09:51:17,528] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52038)
+[2025-05-08 09:51:17,528] ERROR: Error (handshake): Client ('127.0.0.1', 52037) didn't say HELLO
+[2025-05-08 09:51:17,528] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52039)
+[2025-05-08 09:51:17,528] ERROR: Error (handshake): Client ('127.0.0.1', 52039) didn't say HELLO
+[2025-05-08 09:51:17,528] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52040)
+[2025-05-08 09:51:17,528] ERROR: Error (handshake): Client ('127.0.0.1', 52040) didn't say HELLO
+[2025-05-08 09:51:17,534] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52041)
+[2025-05-08 09:51:17,534] ERROR: Error (handshake): Client ('127.0.0.1', 52041) didn't say HELLO
+[2025-05-08 09:51:17,535] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52042)
+[2025-05-08 09:51:17,535] ERROR: Error (handshake): Client ('127.0.0.1', 52042) didn't say HELLO
+[2025-05-08 09:51:18,032] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:18,032] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:18,529] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:18,529] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:20,064] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52043)
+[2025-05-08 09:51:20,064] ERROR: Error (handshake): Client ('127.0.0.1', 52043) didn't say HELLO
+[2025-05-08 09:51:20,067] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52044)
+[2025-05-08 09:51:20,067] ERROR: Error (handshake): Client ('127.0.0.1', 52044) didn't say HELLO
+[2025-05-08 09:51:20,069] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52045)
+[2025-05-08 09:51:20,118] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52046)
+[2025-05-08 09:51:20,118] ERROR: Error (handshake): Client ('127.0.0.1', 52046) didn't say HELLO
+[2025-05-08 09:51:20,120] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52047)
+[2025-05-08 09:51:20,121] ERROR: Error (handshake): Client ('127.0.0.1', 52047) didn't say HELLO
+[2025-05-08 09:51:20,122] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52048)
+[2025-05-08 09:51:20,122] ERROR: Error (handshake): Client ('127.0.0.1', 52048) didn't say HELLO
+[2025-05-08 09:51:20,123] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52049)
+[2025-05-08 09:51:20,124] ERROR: Error (handshake): Client ('127.0.0.1', 52049) didn't say HELLO
+[2025-05-08 09:51:20,125] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52050)
+[2025-05-08 09:51:20,126] ERROR: Error (handshake): Client ('127.0.0.1', 52050) didn't say HELLO
+[2025-05-08 09:51:20,128] INFO: Connection Status: Initiating connection - from ('127.0.0.1', 52051)
+[2025-05-08 09:51:20,640] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:20,640] ERROR: Error (client_handler): 'NoneType' object is not subscriptable
+[2025-05-08 09:51:21,081] ERROR: Error (message_processing): Expecting value: line 1 column 1 (char 0)
+[2025-05-08 09:51:21,081] ERROR: Error (client_handler): 'NoneType' object is not subscriptable

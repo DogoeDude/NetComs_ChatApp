@@ -2,7 +2,7 @@ import sys
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
                             QHBoxLayout, QTextEdit, QLineEdit, QPushButton, 
                             QLabel, QInputDialog, QMessageBox)
-from PyQt6.QtCore import Qt, QThread, pyqtSignal
+from PyQt6.QtCore import Qt, QThread, pyqtSignal, QThreadPool, QRunnable
 from PyQt6.QtGui import QFont, QColor
 import socket
 import logging
@@ -11,6 +11,24 @@ from protocol import (
     MessageType, create_message, parse_message, format_message_for_display,
     create_handshake_message, setup_logging
 )
+import multiprocessing
+from concurrent.futures import ThreadPoolExecutor
+import queue
+
+class MessageProcessor(QRunnable):
+    """Parallel message processor for handling incoming messages"""
+    def __init__(self, message, callback):
+        super().__init__()
+        self.message = message
+        self.callback = callback
+
+    def run(self):
+        try:
+            msg_data = parse_message(self.message)
+            formatted_message = format_message_for_display(msg_data)
+            self.callback(formatted_message)
+        except Exception as e:
+            print(f"Error processing message: {e}")
 
 class ChatThread(QThread):
     message_received = pyqtSignal(str)
@@ -20,16 +38,18 @@ class ChatThread(QThread):
         super().__init__()
         self.client_socket = client_socket
         self.running = True
+        self.thread_pool = QThreadPool()
+        self.thread_pool.setMaxThreadCount(multiprocessing.cpu_count() * 2)
+        self.message_queue = queue.Queue()
 
     def run(self):
         while self.running:
             try:
                 message = self.client_socket.recv(1024)
                 if message and self.running:
-                    msg_data = parse_message(message)
-                    formatted_message = format_message_for_display(msg_data)
-                    print(f"Received: {formatted_message}")  # Debug print
-                    self.message_received.emit(formatted_message)
+                    # Process message in parallel
+                    processor = MessageProcessor(message, self.message_received.emit)
+                    self.thread_pool.start(processor)
             except Exception as e:
                 if self.running:
                     print(f"Thread error: {e}")
@@ -38,6 +58,20 @@ class ChatThread(QThread):
 
     def stop(self):
         self.running = False
+        self.thread_pool.waitForDone()
+
+class MessageSender(QRunnable):
+    """Parallel message sender for handling outgoing messages"""
+    def __init__(self, socket, message):
+        super().__init__()
+        self.socket = socket
+        self.message = message
+
+    def run(self):
+        try:
+            self.socket.send(self.message)
+        except Exception as e:
+            print(f"Error sending message: {e}")
 
 class ChatWindow(QMainWindow):
     def __init__(self):
@@ -45,6 +79,8 @@ class ChatWindow(QMainWindow):
         self.client_socket = None
         self.username = None
         self.chat_thread = None
+        self.thread_pool = QThreadPool()
+        self.thread_pool.setMaxThreadCount(multiprocessing.cpu_count() * 2)
         self.initUI()
         self.connectToServer()
 
@@ -179,35 +215,9 @@ Press Enter or click Send to send a message.</span>
             # Log handshake steps
             logging.info(f"Attempting handshake for user {username}")
             
-            # Step 1: Send HELLO
-            hello_msg = create_handshake_message(MessageType.HELLO)
-            self.client_socket.send(hello_msg)
-            logging.info("Sent HELLO message")
+            # Parallel handshake process
+            self._perform_handshake()
             
-            # Step 2: Receive HELLO_ACK
-            response = parse_message(self.client_socket.recv(1024))
-            logging.info(f"Received response: {response}")
-            if response["type"] != MessageType.HELLO_ACK.value:
-                logging.error(f"Unexpected response during HELLO: {response}")
-                raise Exception("Handshake failed")
-            
-            # Step 3: Send Username
-            username_msg = create_message(MessageType.USERNAME, self.username, self.username)
-            self.client_socket.send(username_msg)
-            logging.info(f"Sent USERNAME: {self.username}")
-            
-            # Step 4: Receive USERNAME_ACK
-            response = parse_message(self.client_socket.recv(1024))
-            logging.info(f"Received username response: {response}")
-            if response["type"] != MessageType.USERNAME_ACK.value:
-                logging.error(f"Username not accepted: {response}")
-                raise Exception("Username not accepted")
-
-            # Send join message
-            join_message = create_message(MessageType.JOIN, self.username, "joined the chat")
-            self.client_socket.send(join_message)
-            logging.info("Sent JOIN message")
-
             # Start receive thread
             self.chat_thread = ChatThread(self.client_socket)
             self.chat_thread.message_received.connect(self.display_message)
@@ -222,6 +232,37 @@ Press Enter or click Send to send a message.</span>
             QMessageBox.critical(self, 'Connection Error', f'Could not connect to server: {str(e)}')
             self.close()
 
+    def _perform_handshake(self):
+        """Perform handshake in parallel"""
+        # Step 1: Send HELLO
+        hello_msg = create_handshake_message(MessageType.HELLO)
+        self.client_socket.send(hello_msg)
+        logging.info("Sent HELLO message")
+        
+        # Step 2: Receive HELLO_ACK
+        response = parse_message(self.client_socket.recv(1024))
+        logging.info(f"Received response: {response}")
+        if response["type"] != MessageType.HELLO_ACK.value:
+            logging.error(f"Unexpected response during HELLO: {response}")
+            raise Exception("Handshake failed")
+        
+        # Step 3: Send Username
+        username_msg = create_message(MessageType.USERNAME, self.username, self.username)
+        self.client_socket.send(username_msg)
+        logging.info(f"Sent USERNAME: {self.username}")
+        
+        # Step 4: Receive USERNAME_ACK
+        response = parse_message(self.client_socket.recv(1024))
+        logging.info(f"Received username response: {response}")
+        if response["type"] != MessageType.USERNAME_ACK.value:
+            logging.error(f"Username not accepted: {response}")
+            raise Exception("Username not accepted")
+
+        # Send join message
+        join_message = create_message(MessageType.JOIN, self.username, "joined the chat")
+        self.client_socket.send(join_message)
+        logging.info("Sent JOIN message")
+
     def send_message(self):
         message = self.message_input.text().strip()
         if message:
@@ -230,7 +271,9 @@ Press Enter or click Send to send a message.</span>
             else:
                 try:
                     chat_message = create_message(MessageType.CHAT, self.username, message)
-                    self.client_socket.send(chat_message)
+                    # Send message in parallel
+                    sender = MessageSender(self.client_socket, chat_message)
+                    self.thread_pool.start(sender)
                     
                     # Display our own message immediately with highlighting
                     timestamp = datetime.now().strftime('%H:%M:%S')
@@ -288,7 +331,8 @@ Available Commands:
                 # Then send leave message
                 try:
                     leave_message = create_message(MessageType.LEAVE, self.username, "left the chat")
-                    self.client_socket.send(leave_message)
+                    sender = MessageSender(self.client_socket, leave_message)
+                    self.thread_pool.start(sender)
                 except:
                     pass  # Ignore send errors during shutdown
 
